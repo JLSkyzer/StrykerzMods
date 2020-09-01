@@ -1,0 +1,125 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "§eBienvenue sur §bCMinecount",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eBienvenue sur §bCMinecount",
+          "x": 295,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§bCasque électrique §a500$",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§bCasque électrique §a500$",
+          "x": 180,
+          "y": 103
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "casque_photo.png",
+          "name": "casque_photo.png",
+          "x": 185,
+          "y": 129
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §bCasque electrique pour §a500$",
+          "onClick": {
+            "name": "AcheterCasqueElectrique"
+          },
+          "width": 413,
+          "height": 40,
+          "name": "Acheter §bCasque electrique pour §a500$",
+          "x": 253,
+          "y": 138
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quitter L'application",
+          "onClick": {
+            "name": "OpenPhone"
+          },
+          "width": 420,
+          "height": 40,
+          "name": "Quitter L'application",
+          "x": 213,
+          "y": 32
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde §a<VAR:money> $",
+          "x": 8,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§bAK 47 §f+ §b6 munition §a12.000$",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§bAK 47 §f+ §b6 munition §a12.000$",
+          "x": 181,
+          "y": 194
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ak47_photo.png",
+          "name": "ak47_photo.png",
+          "x": 184,
+          "y": 217
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §bAK47 §f+ §b6 munition §a12.000$",
+          "onClick": {
+            "name": "AcheterAk47"
+          },
+          "width": 416,
+          "height": 40,
+          "name": "Acheter §bAK47 §f+ §b6 munition §a12.000$",
+          "x": 253,
+          "y": 227
+        }
+      }
+    ]
+  }
+}

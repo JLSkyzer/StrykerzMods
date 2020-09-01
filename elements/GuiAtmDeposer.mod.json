@@ -1,0 +1,151 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Déposer",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Déposer",
+          "x": 250,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde §a<VAR:money> $",
+          "x": 454,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "5",
+          "onClick": {
+            "name": "Deposer5"
+          },
+          "width": 20,
+          "height": 40,
+          "name": "5",
+          "x": 264,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "10",
+          "onClick": {
+            "name": "Deposer10"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "10",
+          "x": 300,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "20",
+          "onClick": {
+            "name": "Deposer20"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "20",
+          "x": 390,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "50",
+          "onClick": {
+            "name": "Deposer50"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "50",
+          "x": 480,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "100",
+          "onClick": {
+            "name": "Deposer100"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "100",
+          "x": 534,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "200",
+          "onClick": {
+            "name": "Deposer200"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "200",
+          "x": 336,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "500",
+          "onClick": {
+            "name": "Deposer500"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "500",
+          "x": 426,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour",
+          "onClick": {
+            "name": "AtmRetour"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Retour",
+          "x": 120,
+          "y": 96
+        }
+      }
+    ]
+  }
+}

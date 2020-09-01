@@ -1,0 +1,271 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "minecraft-map-survival-underground-mine.png",
+          "name": "minecraft-map-survival-underground-mine.png",
+          "x": 176,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "MinerShop",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "MinerShop",
+          "x": 376,
+          "y": 36
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde: §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde: §a<VAR:money> $",
+          "x": 56,
+          "y": 36
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Coal",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Coal",
+          "x": 196,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "coal_ore.png",
+          "name": "coal_ore.png",
+          "x": 196,
+          "y": 112
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §a15$/unité",
+          "onClick": {
+            "name": "AcheterCoal"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Acheter §a15$/unité",
+          "x": 196,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Vendre §a5$/unité",
+          "onClick": {
+            "name": "VendreCoal"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Vendre §a5$/unité",
+          "x": 196,
+          "y": 188
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ligne_rouge_verte.png",
+          "name": "ligne_rouge_verte.png",
+          "x": 416,
+          "y": 74
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quitter L'application",
+          "onClick": {
+            "name": "OpenPhone"
+          },
+          "width": 281,
+          "height": 40,
+          "name": "Quitter L'application",
+          "x": 468,
+          "y": 25
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Iron Ingot",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Iron Ingot",
+          "x": 196,
+          "y": 226
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "iron_ore.png",
+          "name": "iron_ore.png",
+          "x": 196,
+          "y": 245
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §a40$/unité",
+          "onClick": {
+            "name": "AcheterIronIngot"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Acheter §a40$/unité",
+          "x": 196,
+          "y": 283
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Vendre §a10$/unité",
+          "onClick": {
+            "name": "VendreIronIngot"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Vendre §a10$/unité",
+          "x": 196,
+          "y": 321
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Gold Ingot",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Gold Ingot",
+          "x": 436,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gold_ore.png",
+          "name": "gold_ore.png",
+          "x": 436,
+          "y": 112
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §a120$/unité",
+          "onClick": {
+            "name": "AcheterGoldIngoy"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Acheter §a120$/unité",
+          "x": 436,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Vendre §a25$/unité",
+          "onClick": {
+            "name": "VendreGoldIngot"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Vendre §a25$/unité",
+          "x": 436,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Diamond",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Diamond",
+          "x": 436,
+          "y": 226
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "diamond_ore.png",
+          "name": "diamond_ore.png",
+          "x": 436,
+          "y": 245
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter §a250$/unité",
+          "onClick": {
+            "name": "AcheterDiamond"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Acheter §a250$/unité",
+          "x": 436,
+          "y": 283
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Vendre §a75$/unité",
+          "onClick": {
+            "name": "VendreDiamond"
+          },
+          "width": 220,
+          "height": 40,
+          "name": "Vendre §a75$/unité",
+          "x": 436,
+          "y": 321
+        }
+      }
+    ]
+  }
+}

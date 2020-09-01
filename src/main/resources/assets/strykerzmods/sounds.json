@@ -1,0 +1,29 @@
+{
+  "cash_sound": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "strykerzmods:cash_register_cha_ching-soundbible.com-184076484",
+        "stream": false
+      }
+    ]
+  },
+  "ak47-soundbible.com": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "strykerzmods:ak47-soundbible.com-1580127026",
+        "stream": false
+      }
+    ]
+  },
+  "reload_gun": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "strykerzmods:shotgun-reload-old_school-ra_the_sun_god-580332022",
+        "stream": false
+      }
+    ]
+  }
+}

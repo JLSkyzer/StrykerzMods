@@ -1,0 +1,63 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "galaxy_500x332.png",
+          "name": "galaxy_500x332.png",
+          "x": 176,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eMerci de votre achat chez §aCMinecount",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eMerci de votre achat chez §aCMinecount",
+          "x": 236,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour au magasin",
+          "onClick": {
+            "name": "OpenMarket"
+          },
+          "width": 320,
+          "height": 40,
+          "name": "Retour au magasin",
+          "x": 256,
+          "y": 169
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quitter l'application",
+          "onClick": {
+            "name": "OpenPhone"
+          },
+          "width": 320,
+          "height": 40,
+          "name": "Quitter l'application",
+          "x": 256,
+          "y": 207
+        }
+      }
+    ]
+  }
+}

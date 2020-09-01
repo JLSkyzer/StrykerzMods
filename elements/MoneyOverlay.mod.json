@@ -1,0 +1,26 @@
+{
+  "_fv": 10,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "§eTa money: §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eTa money: §a<VAR:money> $",
+          "x": 580,
+          "y": 267
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "ConditionMoneyOverlayOn"
+    }
+  }
+}

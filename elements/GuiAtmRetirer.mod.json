@@ -1,0 +1,151 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Retirer",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Retirer",
+          "x": 253,
+          "y": 50
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "5",
+          "onClick": {
+            "name": "Retirer5"
+          },
+          "width": 20,
+          "height": 40,
+          "name": "5",
+          "x": 264,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "10",
+          "onClick": {
+            "name": "Retirer10"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "10",
+          "x": 300,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "20",
+          "onClick": {
+            "name": "Retirer20"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "20",
+          "x": 390,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "50",
+          "onClick": {
+            "name": "Retirer50"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "50",
+          "x": 480,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "100",
+          "onClick": {
+            "name": "Retirer100"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "100",
+          "x": 534,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "200",
+          "onClick": {
+            "name": "Retirer200"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "200",
+          "x": 336,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "500",
+          "onClick": {
+            "name": "Retirer500"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "500",
+          "x": 426,
+          "y": 150
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde §a<VAR:money> $",
+          "x": 474,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retour",
+          "onClick": {
+            "name": "AtmRetour"
+          },
+          "width": 160,
+          "height": 40,
+          "name": "Retour",
+          "x": 84,
+          "y": 96
+        }
+      }
+    ]
+  }
+}

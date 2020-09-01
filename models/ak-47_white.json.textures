@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "AK-47-2": "ak-47-2",
+        "AK-47-1": "ak-47-1",
+        "AK-47-white": "ak-47-white",
+        "AK-47-4": "ak-47-4",
+        "AK-47-3": "ak-47-3"
+      },
+      "name": "default"
+    }
+  }
+}

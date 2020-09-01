@@ -1,0 +1,67 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "ATM",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "ATM",
+          "x": 249,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde §a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde §a<VAR:money> $",
+          "x": 415,
+          "y": 40
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Retirer",
+          "onClick": {
+            "name": "OpenRetirerMenu"
+          },
+          "width": 140,
+          "height": 40,
+          "name": "Retirer",
+          "x": 264,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Déposer",
+          "onClick": {
+            "name": "OpenDeposerMenu"
+          },
+          "width": 140,
+          "height": 40,
+          "name": "Déposer",
+          "x": 444,
+          "y": 150
+        }
+      }
+    ]
+  }
+}

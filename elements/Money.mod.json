@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "command",
+  "definition": {
+    "commandName": "money",
+    "permissionLevel": 4,
+    "onCommandExecuted": {
+      "name": "MoneyCommandExecuted"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Billet Tab",
+    "icon": {
+      "value": "CUSTOM:Billet5"
+    },
+    "showSearch": false
+  }
+}

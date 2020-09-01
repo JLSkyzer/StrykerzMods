@@ -1,0 +1,92 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 332,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "§6Mine§bBank",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§6Mine§bBank",
+          "x": 354,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Solde:",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Solde:",
+          "x": 192,
+          "y": 114
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§a<VAR:money> $",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§a<VAR:money> $",
+          "x": 192,
+          "y": 150
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "§eVotre Derniere Achat / Vente:",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "§eVotre Derniere Achat / Vente:",
+          "x": 192,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:Dernier_Achat>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:Dernier_Achat>",
+          "x": 192,
+          "y": 222
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Quitter L'application",
+          "onClick": {
+            "name": "OpenPhone"
+          },
+          "width": 324,
+          "height": 40,
+          "name": "Quitter L'application",
+          "x": 264,
+          "y": 366
+        }
+      }
+    ]
+  }
+}

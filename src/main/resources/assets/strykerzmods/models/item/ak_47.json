@@ -1,0 +1,11 @@
+{
+  "parent": "strykerzmods:custom/ak-47_white",
+  "textures": {
+    "AK-47-2": "strykerzmods:blocks/ak-47-2",
+    "AK-47-1": "strykerzmods:blocks/ak-47-1",
+    "AK-47-white": "strykerzmods:blocks/ak-47-white",
+    "AK-47-4": "strykerzmods:blocks/ak-47-4",
+    "AK-47-3": "strykerzmods:blocks/ak-47-3",
+    "particle": "strykerzmods:items/ak47_logo"
+  }
+}

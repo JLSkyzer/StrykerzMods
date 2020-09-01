@@ -1,0 +1,10 @@
+{
+  "parent": "strykerzmods:custom/atm",
+  "textures": {
+    "all": "strykerzmods:blocks/gris_claire",
+    "particle": "strykerzmods:blocks/gris_claire",
+    "0": "strykerzmods:blocks/gris_claire",
+    "1": "strykerzmods:blocks/noire",
+    "2": "strykerzmods:blocks/diamant"
+  }
+}

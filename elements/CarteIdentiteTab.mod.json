@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Carte Identite Tab",
+    "icon": {
+      "value": "CUSTOM:CarteIdentite"
+    },
+    "showSearch": false
+  }
+}
