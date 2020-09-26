@@ -35,6 +35,9 @@
         "type": "button",
         "data": {
           "text": "Acheter Une Licence",
+          "onClick": {
+            "name": "AreHunterProcedure"
+          },
           "width": 120,
           "height": 20,
           "name": "Acheter Une Licence",

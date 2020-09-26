@@ -29,6 +29,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
+import net.forge.mods.strykerzmods.procedures.AreHunterProcedureProcedure;
 import net.forge.mods.strykerzmods.StrykerzmodsModElements;
 import net.forge.mods.strykerzmods.StrykerzmodsMod;
 
@@ -255,6 +256,13 @@ public class HunterWebGuiGui extends StrykerzmodsModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				AreHunterProcedureProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

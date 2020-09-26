@@ -84,6 +84,7 @@ public class StrykerzmodsModVariables {
 			nbt.putBoolean("DevenirRed", instance.DevenirRed);
 			nbt.putBoolean("DevenirBlue", instance.DevenirBlue);
 			nbt.putBoolean("OnTeam", instance.OnTeam);
+			nbt.putBoolean("AreHunter", instance.AreHunter);
 			return nbt;
 		}
 
@@ -97,6 +98,7 @@ public class StrykerzmodsModVariables {
 			instance.DevenirRed = nbt.getBoolean("DevenirRed");
 			instance.DevenirBlue = nbt.getBoolean("DevenirBlue");
 			instance.OnTeam = nbt.getBoolean("OnTeam");
+			instance.AreHunter = nbt.getBoolean("AreHunter");
 		}
 	}
 
@@ -108,6 +110,7 @@ public class StrykerzmodsModVariables {
 		public boolean DevenirRed = false;
 		public boolean DevenirBlue = false;
 		public boolean OnTeam = false;
+		public boolean AreHunter = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				StrykerzmodsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -147,6 +150,7 @@ public class StrykerzmodsModVariables {
 		clone.DevenirRed = original.DevenirRed;
 		clone.DevenirBlue = original.DevenirBlue;
 		clone.OnTeam = original.OnTeam;
+		clone.AreHunter = original.AreHunter;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -178,6 +182,7 @@ public class StrykerzmodsModVariables {
 					variables.DevenirRed = message.data.DevenirRed;
 					variables.DevenirBlue = message.data.DevenirBlue;
 					variables.OnTeam = message.data.OnTeam;
+					variables.AreHunter = message.data.AreHunter;
 				}
 			});
 			context.setPacketHandled(true);
