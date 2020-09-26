@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 12,
   "_type": "block",
   "definition": {
     "texture": "diamant",
@@ -27,6 +27,7 @@
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "REDSTONE"
     },
@@ -35,6 +36,7 @@
       "value": ""
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

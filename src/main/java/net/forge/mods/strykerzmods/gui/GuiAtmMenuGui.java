@@ -124,11 +124,11 @@ public class GuiAtmMenuGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -147,7 +147,7 @@ public class GuiAtmMenuGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("ATM", -1, -17, -1);
+			this.font.drawString("ATM", 0, -17, -1);
 			this.font.drawString("\u00A7eVotre Solde \u00A7a" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", 82, -17, -1);
 		}
@@ -162,11 +162,11 @@ public class GuiAtmMenuGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 38, 70, 20, "Retirer", e -> {
+			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 38, 70, 20, "Retirer", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 97, this.guiTop + 38, 70, 20, "Déposer", e -> {
+			this.addButton(new Button(this.guiLeft + 96, this.guiTop + 38, 70, 20, "Déposer", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));

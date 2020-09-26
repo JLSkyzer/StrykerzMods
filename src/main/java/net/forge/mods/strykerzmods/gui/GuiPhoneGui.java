@@ -124,13 +124,13 @@ public class GuiPhoneGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/phone.png"));
-			this.blit(this.guiLeft + 0, this.guiTop + 1, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 0, this.guiTop + 1, 0, 0, 256, 256, 256, 256);
 		}
 
 		@Override
@@ -161,15 +161,15 @@ public class GuiPhoneGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 23, 90, 20, "Market", e -> {
+			this.addButton(new Button(this.guiLeft + 4, this.guiTop + 23, 90, 20, "Market", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 50, 90, 20, "§6Mine§bBank", e -> {
+			this.addButton(new Button(this.guiLeft + 4, this.guiTop + 50, 90, 20, "§6Mine§bBank", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 77, 90, 20, "MinerShop", e -> {
+			this.addButton(new Button(this.guiLeft + 4, this.guiTop + 77, 90, 20, "MinerShop", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));

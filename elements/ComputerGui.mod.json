@@ -1,0 +1,59 @@
+{
+  "_fv": 12,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 420,
+    "height": 226,
+    "inventoryOffsetX": 1,
+    "inventoryOffsetY": 33,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": false,
+          "name": "1.png",
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "windows.png",
+          "use1Xscale": true,
+          "name": "windows.png",
+          "x": 3,
+          "y": 215
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "google_chrome_logo2.png",
+          "use1Xscale": true,
+          "name": "google_chrome_logo2.png",
+          "x": 5,
+          "y": 189
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Google",
+          "onClick": {
+            "name": "OpenGoogle"
+          },
+          "width": 63,
+          "height": 20,
+          "name": "Google",
+          "x": 24,
+          "y": 187
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "_fv": 12,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 420,
+    "height": 226,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "google.png",
+          "use1Xscale": false,
+          "name": "google.png",
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 120,
+          "height": 20,
+          "name": "RechercherBar",
+          "x": 127,
+          "y": 104
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Rechercher",
+          "onClick": {
+            "name": "RechercherProcedure"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "Rechercher",
+          "x": 50,
+          "y": 104
+        }
+      }
+    ]
+  }
+}

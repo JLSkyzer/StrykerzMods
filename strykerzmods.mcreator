@@ -1304,6 +1304,138 @@
           }
         ]
       }
+    },
+    {
+      "name": "ComputerGui",
+      "type": "gui",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "computer_gui"
+    },
+    {
+      "name": "ComputerOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "computer_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Computer",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "computer"
+    },
+    {
+      "name": "Test",
+      "type": "painting",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test"
+    },
+    {
+      "name": "GoogleGui",
+      "type": "gui",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "google_gui"
+    },
+    {
+      "name": "RechercherProcedure",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rechercher_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenGoogle",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_google",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HunterWebGui",
+      "type": "gui",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hunter_web_gui"
     }
   ],
   "variable_elements": [
@@ -1330,22 +1462,106 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "RedPlayer",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "BluePlayer",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "KillRed",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "KillBlue",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "RedX",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "RedY",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "RedZ",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "BlueX",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "BlueY",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "BlueZ",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "DevenirRed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "DevenirBlue",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OnTeam",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
     {
       "name": "cash_sound",
-      "file": "cash_register_cha_ching-soundbible.com-184076484",
+      "files": [
+        "cash_register_cha_ching-soundbible.com-184076484"
+      ],
       "category": "master"
     },
     {
       "name": "ak47-soundbible.com",
-      "file": "ak47-soundbible.com-1580127026",
+      "files": [
+        "ak47-soundbible.com-1580127026"
+      ],
       "category": "master"
     },
     {
       "name": "reload_gun",
-      "file": "shotgun-reload-old_school-ra_the_sun_god-580332022",
+      "files": [
+        "shotgun-reload-old_school-ra_the_sun_god-580332022"
+      ],
       "category": "master"
     }
   ],
@@ -1363,6 +1579,7 @@
       "block.strykerzmods.atm": "ATM",
       "item.strykerzmods.electric_armor_armor_helmet": "Electric_armor Helmet",
       "itemGroup.tabbillet_tab": "Billet Tab",
+      "block.strykerzmods.computer": "Computer",
       "item.strykerzmods.billet_50": "Billet §a50$",
       "key.mcreator.money_key_k": "Money Key K",
       "item.strykerzmods.bullet": "Bullet",
@@ -1394,5 +1611,5 @@
     "modElementsPackage": "net.forge.mods.strykerzmods",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000432115
+  "mcreatorVersion": 202000539514
 }

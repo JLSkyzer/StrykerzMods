@@ -1,10 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 12,
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 500,
-    "height": 332,
+    "width": 250,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -12,9 +14,10 @@
         "type": "image",
         "data": {
           "image": "galaxy_500x332.png",
+          "use1Xscale": false,
           "name": "galaxy_500x332.png",
-          "x": 176,
-          "y": 74
+          "x": 88,
+          "y": 37
         }
       },
       {
@@ -26,8 +29,8 @@
             "falpha": 0.0
           },
           "name": "§eMerci de votre achat chez §aCMinecount",
-          "x": 236,
-          "y": 93
+          "x": 118,
+          "y": 47
         }
       },
       {
@@ -37,11 +40,11 @@
           "onClick": {
             "name": "OpenMarket"
           },
-          "width": 320,
-          "height": 40,
+          "width": 160,
+          "height": 20,
           "name": "Retour au magasin",
-          "x": 256,
-          "y": 169
+          "x": 128,
+          "y": 85
         }
       },
       {
@@ -51,11 +54,11 @@
           "onClick": {
             "name": "OpenPhone"
           },
-          "width": 320,
-          "height": 40,
+          "width": 160,
+          "height": 20,
           "name": "Quitter l'application",
-          "x": 256,
-          "y": 207
+          "x": 128,
+          "y": 104
         }
       }
     ]

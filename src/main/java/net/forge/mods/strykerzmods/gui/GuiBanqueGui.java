@@ -123,11 +123,11 @@ public class GuiBanqueGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -146,13 +146,13 @@ public class GuiBanqueGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("\u00A76Mine\u00A7bBank", 89, 2, -1);
-			this.font.drawString("\u00A7eVotre Solde:", 8, 20, -1);
+			this.font.drawString("\u00A76Mine\u00A7bBank", 88, 2, -1);
+			this.font.drawString("\u00A7eVotre Solde:", 7, 20, -1);
 			this.font.drawString("\u00A7a" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", 8, 38, -1);
-			this.font.drawString("\u00A7eVotre Derniere Achat / Vente:", 8, 56, -1);
+					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", 7, 38, -1);
+			this.font.drawString("\u00A7eVotre Derniere Achat / Vente:", 7, 56, -1);
 			this.font.drawString("" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new StrykerzmodsModVariables.PlayerVariables())).Dernier_Achat) + "", 8, 74, -1);
+					.orElse(new StrykerzmodsModVariables.PlayerVariables())).Dernier_Achat) + "", 7, 74, -1);
 		}
 
 		@Override
@@ -165,7 +165,7 @@ public class GuiBanqueGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 44, this.guiTop + 146, 162, 20, "Quitter L'application", e -> {
+			this.addButton(new Button(this.guiLeft + 43, this.guiTop + 146, 162, 20, "Quitter L'application", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));

@@ -1,10 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 12,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 352,
-    "height": 332,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -17,8 +19,8 @@
             "falpha": 0.0
           },
           "name": "Déposer",
-          "x": 250,
-          "y": 54
+          "x": 125,
+          "y": 27
         }
       },
       {
@@ -30,8 +32,8 @@
             "falpha": 0.0
           },
           "name": "§eVotre Solde §a<VAR:money> $",
-          "x": 454,
-          "y": 53
+          "x": 227,
+          "y": 27
         }
       },
       {
@@ -41,11 +43,11 @@
           "onClick": {
             "name": "Deposer5"
           },
-          "width": 20,
-          "height": 40,
+          "width": 10,
+          "height": 20,
           "name": "5",
-          "x": 264,
-          "y": 96
+          "x": 132,
+          "y": 48
         }
       },
       {
@@ -55,11 +57,11 @@
           "onClick": {
             "name": "Deposer10"
           },
-          "width": 40,
-          "height": 40,
+          "width": 20,
+          "height": 20,
           "name": "10",
-          "x": 300,
-          "y": 96
+          "x": 150,
+          "y": 48
         }
       },
       {
@@ -69,11 +71,11 @@
           "onClick": {
             "name": "Deposer20"
           },
-          "width": 40,
-          "height": 40,
+          "width": 20,
+          "height": 20,
           "name": "20",
-          "x": 390,
-          "y": 96
+          "x": 195,
+          "y": 48
         }
       },
       {
@@ -83,11 +85,11 @@
           "onClick": {
             "name": "Deposer50"
           },
-          "width": 40,
-          "height": 40,
+          "width": 20,
+          "height": 20,
           "name": "50",
-          "x": 480,
-          "y": 96
+          "x": 240,
+          "y": 48
         }
       },
       {
@@ -97,11 +99,11 @@
           "onClick": {
             "name": "Deposer100"
           },
-          "width": 60,
-          "height": 40,
+          "width": 30,
+          "height": 20,
           "name": "100",
-          "x": 534,
-          "y": 96
+          "x": 267,
+          "y": 48
         }
       },
       {
@@ -111,11 +113,11 @@
           "onClick": {
             "name": "Deposer200"
           },
-          "width": 60,
-          "height": 40,
+          "width": 30,
+          "height": 20,
           "name": "200",
-          "x": 336,
-          "y": 150
+          "x": 168,
+          "y": 75
         }
       },
       {
@@ -125,11 +127,11 @@
           "onClick": {
             "name": "Deposer500"
           },
-          "width": 60,
-          "height": 40,
+          "width": 30,
+          "height": 20,
           "name": "500",
-          "x": 426,
-          "y": 150
+          "x": 213,
+          "y": 75
         }
       },
       {
@@ -139,11 +141,11 @@
           "onClick": {
             "name": "AtmRetour"
           },
-          "width": 120,
-          "height": 40,
+          "width": 60,
+          "height": 20,
           "name": "Retour",
-          "x": 120,
-          "y": 96
+          "x": 60,
+          "y": 48
         }
       }
     ]

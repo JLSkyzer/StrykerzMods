@@ -18,11 +18,13 @@ public class MoneyCommandExecutedProcedure extends StrykerzmodsModElements.ModEl
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure MoneyCommandExecuted!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure MoneyCommandExecuted!");
 			return;
 		}
 		if (dependencies.get("cmdparams") == null) {
-			System.err.println("Failed to load dependency cmdparams for procedure MoneyCommandExecuted!");
+			if (!dependencies.containsKey("cmdparams"))
+				System.err.println("Failed to load dependency cmdparams for procedure MoneyCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

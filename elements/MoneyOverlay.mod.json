@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 12,
   "_type": "overlay",
   "definition": {
     "priority": "HIGHEST",
@@ -13,8 +13,8 @@
             "falpha": 0.0
           },
           "name": "§eTa money: §a<VAR:money> $",
-          "x": 580,
-          "y": 267
+          "x": 290,
+          "y": 134
         }
       }
     ],

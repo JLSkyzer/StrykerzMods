@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "strykerzmods:block/computer"
+    },
+    "facing=east": {
+      "model": "strykerzmods:block/computer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "strykerzmods:block/computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "strykerzmods:block/computer",
+      "y": 270
+    }
+  }
+}

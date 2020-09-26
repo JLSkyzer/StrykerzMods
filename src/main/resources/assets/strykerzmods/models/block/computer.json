@@ -1,0 +1,9 @@
+{
+  "parent": "strykerzmods:custom/computer",
+  "textures": {
+    "all": "strykerzmods:blocks/diamant",
+    "particle": "strykerzmods:blocks/diamant",
+    "0": "strykerzmods:blocks/diamant",
+    "1": "strykerzmods:blocks/noire"
+  }
+}

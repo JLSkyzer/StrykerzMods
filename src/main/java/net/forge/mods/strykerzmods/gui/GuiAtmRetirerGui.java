@@ -314,11 +314,11 @@ public class GuiAtmRetirerGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -339,7 +339,7 @@ public class GuiAtmRetirerGui extends StrykerzmodsModElements.ModElement {
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 			this.font.drawString("Retirer", 1, -12, -1);
 			this.font.drawString("\u00A7eVotre Solde \u00A7a" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", 112, -10, -1);
+					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", 111, -10, -1);
 		}
 
 		@Override
@@ -352,31 +352,31 @@ public class GuiAtmRetirerGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 11, 10, 20, "5", e -> {
+			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 11, 10, 20, "5", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 25, this.guiTop + 11, 20, 20, "10", e -> {
+			this.addButton(new Button(this.guiLeft + 24, this.guiTop + 11, 20, 20, "10", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 70, this.guiTop + 11, 20, 20, "20", e -> {
+			this.addButton(new Button(this.guiLeft + 69, this.guiTop + 11, 20, 20, "20", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 11, 20, 20, "50", e -> {
+			this.addButton(new Button(this.guiLeft + 114, this.guiTop + 11, 20, 20, "50", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 142, this.guiTop + 11, 30, 20, "100", e -> {
+			this.addButton(new Button(this.guiLeft + 141, this.guiTop + 11, 30, 20, "100", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 43, this.guiTop + 38, 30, 20, "200", e -> {
+			this.addButton(new Button(this.guiLeft + 42, this.guiTop + 38, 30, 20, "200", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 88, this.guiTop + 38, 30, 20, "500", e -> {
+			this.addButton(new Button(this.guiLeft + 87, this.guiTop + 38, 30, 20, "500", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
 				handleButtonAction(entity, 6, x, y, z);
 			}));

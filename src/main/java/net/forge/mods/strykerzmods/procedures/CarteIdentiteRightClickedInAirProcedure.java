@@ -17,11 +17,13 @@ public class CarteIdentiteRightClickedInAirProcedure extends StrykerzmodsModElem
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure CarteIdentiteRightClickedInAir!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure CarteIdentiteRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
-			System.err.println("Failed to load dependency itemstack for procedure CarteIdentiteRightClickedInAir!");
+			if (!dependencies.containsKey("itemstack"))
+				System.err.println("Failed to load dependency itemstack for procedure CarteIdentiteRightClickedInAir!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

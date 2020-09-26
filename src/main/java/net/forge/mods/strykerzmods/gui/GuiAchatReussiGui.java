@@ -123,13 +123,13 @@ public class GuiAchatReussiGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/galaxy_500x332.png"));
-			this.blit(this.guiLeft + 0, this.guiTop + 0, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 0, this.guiTop + 0, 0, 0, 256, 256, 256, 256);
 		}
 
 		@Override
@@ -148,7 +148,7 @@ public class GuiAchatReussiGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("\u00A7eMerci de votre achat chez \u00A7aCMinecount", 30, 10, -1);
+			this.font.drawString("\u00A7eMerci de votre achat chez \u00A7aCMinecount", 29, 10, -1);
 		}
 
 		@Override
@@ -161,11 +161,11 @@ public class GuiAchatReussiGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 40, this.guiTop + 48, 160, 20, "Retour au magasin", e -> {
+			this.addButton(new Button(this.guiLeft + 39, this.guiTop + 48, 160, 20, "Retour au magasin", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 40, this.guiTop + 67, 160, 20, "Quitter l'application", e -> {
+			this.addButton(new Button(this.guiLeft + 39, this.guiTop + 67, 160, 20, "Quitter l'application", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));

@@ -15,7 +15,8 @@ public class ConditionMoneyOverlayOnProcedure extends StrykerzmodsModElements.Mo
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure ConditionMoneyOverlayOn!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure ConditionMoneyOverlayOn!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

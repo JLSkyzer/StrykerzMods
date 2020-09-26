@@ -1,11 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 12,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "bullet_texture",
     "customModelName": "Normal",
     "name": "Bullet Texture",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "No creative tab entry"
     },

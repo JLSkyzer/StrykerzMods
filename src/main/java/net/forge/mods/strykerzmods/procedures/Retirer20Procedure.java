@@ -20,7 +20,8 @@ public class Retirer20Procedure extends StrykerzmodsModElements.ModElement {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure Retirer20!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure Retirer20!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -131,24 +131,24 @@ public class GuiMinerShopGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager()
 					.bindTexture(new ResourceLocation("strykerzmods:textures/minecraft-map-survival-underground-mine.png"));
-			this.blit(this.guiLeft + 0, this.guiTop + 0, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 0, this.guiTop + 0, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/coal_ore.png"));
-			this.blit(this.guiLeft + 10, this.guiTop + 19, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 9, this.guiTop + 19, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/ligne_rouge_verte.png"));
-			this.blit(this.guiLeft + 120, this.guiTop + 0, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 119, this.guiTop + 0, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/iron_ore.png"));
-			this.blit(this.guiLeft + 10, this.guiTop + 86, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 9, this.guiTop + 86, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/gold_ore.png"));
-			this.blit(this.guiLeft + 130, this.guiTop + 19, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 129, this.guiTop + 19, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/diamond_ore.png"));
-			this.blit(this.guiLeft + 130, this.guiTop + 86, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 129, this.guiTop + 86, 0, 0, 256, 256, 256, 256);
 		}
 
 		@Override
@@ -167,13 +167,13 @@ public class GuiMinerShopGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("MinerShop", 100, -19, -1);
+			this.font.drawString("MinerShop", 99, -19, -1);
 			this.font.drawString("\u00A7eVotre Solde: \u00A7a" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", -60, -19, -1);
-			this.font.drawString("Coal", 10, 10, -1);
-			this.font.drawString("Iron Ingot", 10, 76, -1);
-			this.font.drawString("Gold Ingot", 130, 10, -1);
-			this.font.drawString("Diamond", 130, 76, -1);
+			this.font.drawString("Coal", 9, 10, -1);
+			this.font.drawString("Iron Ingot", 9, 76, -1);
+			this.font.drawString("Gold Ingot", 129, 10, -1);
+			this.font.drawString("Diamond", 129, 76, -1);
 		}
 
 		@Override
@@ -186,39 +186,39 @@ public class GuiMinerShopGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 10, this.guiTop + 38, 110, 20, "Acheter §a15$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 9, this.guiTop + 38, 110, 20, "Acheter §a15$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 10, this.guiTop + 57, 110, 20, "Vendre §a5$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 9, this.guiTop + 57, 110, 20, "Vendre §a5$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 146, this.guiTop + -24, 141, 20, "Quitter L'application", e -> {
+			this.addButton(new Button(this.guiLeft + 145, this.guiTop + -24, 141, 20, "Quitter L'application", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 10, this.guiTop + 105, 110, 20, "Acheter §a40$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 9, this.guiTop + 105, 110, 20, "Acheter §a40$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 10, this.guiTop + 124, 110, 20, "Vendre §a10$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 9, this.guiTop + 124, 110, 20, "Vendre §a10$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 130, this.guiTop + 38, 110, 20, "Acheter §a120$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 129, this.guiTop + 38, 110, 20, "Acheter §a120$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 130, this.guiTop + 57, 110, 20, "Vendre §a25$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 129, this.guiTop + 57, 110, 20, "Vendre §a25$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
 				handleButtonAction(entity, 6, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 130, this.guiTop + 105, 110, 20, "Acheter §a250$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 129, this.guiTop + 105, 110, 20, "Acheter §a250$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(7, x, y, z));
 				handleButtonAction(entity, 7, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 130, this.guiTop + 124, 110, 20, "Vendre §a75$/unité", e -> {
+			this.addButton(new Button(this.guiLeft + 129, this.guiTop + 124, 110, 20, "Vendre §a75$/unité", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(8, x, y, z));
 				handleButtonAction(entity, 8, x, y, z);
 			}));

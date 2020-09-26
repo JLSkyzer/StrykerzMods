@@ -125,15 +125,15 @@ public class GuiMarketGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/casque_photo.png"));
-			this.blit(this.guiLeft + 4, this.guiTop + 28, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 4, this.guiTop + 28, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/ak47_photo.png"));
-			this.blit(this.guiLeft + 4, this.guiTop + 72, 0, 0, 256, 256);
+			this.blit(this.guiLeft + 3, this.guiTop + 72, 0, 0, 256, 256, 256, 256);
 		}
 
 		@Override
@@ -153,7 +153,7 @@ public class GuiMarketGui extends StrykerzmodsModElements.ModElement {
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 			this.font.drawString("\u00A7eBienvenue sur \u00A7bCMinecount", 59, 2, -1);
-			this.font.drawString("\u00A7bCasque \u00E9lectrique \u00A7a500$", 2, 15, -1);
+			this.font.drawString("\u00A7bCasque \u00E9lectrique \u00A7a500$", 1, 15, -1);
 			this.font.drawString("\u00A7eVotre Solde \u00A7a" + ((entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new StrykerzmodsModVariables.PlayerVariables())).money) + " $", -84, -16, -1);
 			this.font.drawString("\u00A7bAK 47 \u00A7f+ \u00A7b6 munition \u00A7a12.000$", 2, 60, -1);

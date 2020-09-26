@@ -36,6 +36,16 @@ public class StrykerzmodsModVariables {
 	private void init(FMLCommonSetupEvent event) {
 		CapabilityManager.INSTANCE.register(PlayerVariables.class, new PlayerVariablesStorage(), PlayerVariables::new);
 	}
+	public static double RedPlayer = 0;
+	public static double BluePlayer = 0;
+	public static double KillRed = 0;
+	public static double KillBlue = 0;
+	public static double RedX = 0;
+	public static double RedY = 0;
+	public static double RedZ = 0;
+	public static double BlueX = 0;
+	public static double BlueY = 0;
+	public static double BlueZ = 0;
 	@CapabilityInject(PlayerVariables.class)
 	public static Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = null;
 	@SubscribeEvent
@@ -71,6 +81,9 @@ public class StrykerzmodsModVariables {
 			nbt.putBoolean("MoneyOverlay", instance.MoneyOverlay);
 			nbt.putString("Metier", instance.Metier);
 			nbt.putString("Dernier_Achat", instance.Dernier_Achat);
+			nbt.putBoolean("DevenirRed", instance.DevenirRed);
+			nbt.putBoolean("DevenirBlue", instance.DevenirBlue);
+			nbt.putBoolean("OnTeam", instance.OnTeam);
 			return nbt;
 		}
 
@@ -81,6 +94,9 @@ public class StrykerzmodsModVariables {
 			instance.MoneyOverlay = nbt.getBoolean("MoneyOverlay");
 			instance.Metier = nbt.getString("Metier");
 			instance.Dernier_Achat = nbt.getString("Dernier_Achat");
+			instance.DevenirRed = nbt.getBoolean("DevenirRed");
+			instance.DevenirBlue = nbt.getBoolean("DevenirBlue");
+			instance.OnTeam = nbt.getBoolean("OnTeam");
 		}
 	}
 
@@ -89,6 +105,9 @@ public class StrykerzmodsModVariables {
 		public boolean MoneyOverlay = false;
 		public String Metier = "";
 		public String Dernier_Achat = "";
+		public boolean DevenirRed = false;
+		public boolean DevenirBlue = false;
+		public boolean OnTeam = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				StrykerzmodsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -118,15 +137,17 @@ public class StrykerzmodsModVariables {
 
 	@SubscribeEvent
 	public void clonePlayer(PlayerEvent.Clone event) {
-		if (event.isWasDeath()) {
-			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
-			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
-			clone.money = original.money;
-			clone.MoneyOverlay = original.MoneyOverlay;
-			clone.Metier = original.Metier;
-			clone.Dernier_Achat = original.Dernier_Achat;
+		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PlayerVariables()));
+		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		clone.money = original.money;
+		clone.MoneyOverlay = original.MoneyOverlay;
+		clone.Metier = original.Metier;
+		clone.Dernier_Achat = original.Dernier_Achat;
+		clone.DevenirRed = original.DevenirRed;
+		clone.DevenirBlue = original.DevenirBlue;
+		clone.OnTeam = original.OnTeam;
+		if (!event.isWasDeath()) {
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -154,6 +175,9 @@ public class StrykerzmodsModVariables {
 					variables.MoneyOverlay = message.data.MoneyOverlay;
 					variables.Metier = message.data.Metier;
 					variables.Dernier_Achat = message.data.Dernier_Achat;
+					variables.DevenirRed = message.data.DevenirRed;
+					variables.DevenirBlue = message.data.DevenirBlue;
+					variables.OnTeam = message.data.OnTeam;
 				}
 			});
 			context.setPacketHandled(true);

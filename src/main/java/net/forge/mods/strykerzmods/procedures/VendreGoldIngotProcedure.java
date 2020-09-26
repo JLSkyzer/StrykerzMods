@@ -25,23 +25,28 @@ public class VendreGoldIngotProcedure extends StrykerzmodsModElements.ModElement
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure VendreGoldIngot!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure VendreGoldIngot!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure VendreGoldIngot!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure VendreGoldIngot!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure VendreGoldIngot!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure VendreGoldIngot!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure VendreGoldIngot!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure VendreGoldIngot!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure VendreGoldIngot!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure VendreGoldIngot!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
