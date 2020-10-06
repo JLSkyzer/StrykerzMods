@@ -1391,22 +1391,6 @@
           {
             "name": "guistate",
             "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -1440,32 +1424,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "HunterWebGui",
-      "type": "gui",
-      "sortid": 79,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hunter_web_gui"
-    },
-    {
-      "name": "AreHunterProcedure",
-      "type": "procedure",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "are_hunter_procedure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       }
@@ -1579,6 +1537,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Pouvoir",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ExplosionTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "ExplosionStatut",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1606,15 +1582,15 @@
   ],
   "language_map": {
     "en_us": {
-      "item.strykerzmods.carte_identite": "Carte Identité",
       "item.strykerzmods.billet_20": "Billet §a20$",
+      "item.strykerzmods.carte_identite": "Carte Identité",
       "itemGroup.tabgun_tab": "Gun Tab",
       "block.strykerzmods.printer": "Printer",
       "item.strykerzmods.electric_armor_armor_chestplate": "Electric_armor Chestplate",
       "item.strykerzmods.electric_armor_armor_leggings": "Electric_armor Leggings",
       "item.strykerzmods.electric_armor_armor_boots": "Electric_armor Boots",
-      "item.strykerzmods.ak_47": "Ak 47",
       "item.strykerzmods.phone": "Phone",
+      "item.strykerzmods.ak_47": "Ak 47",
       "block.strykerzmods.atm": "ATM",
       "item.strykerzmods.electric_armor_armor_helmet": "Electric_armor Helmet",
       "itemGroup.tabbillet_tab": "Billet Tab",

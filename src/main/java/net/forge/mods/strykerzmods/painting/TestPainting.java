@@ -18,6 +18,6 @@ public class TestPainting extends StrykerzmodsModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<PaintingType> event) {
-		event.getRegistry().register(new PaintingType(64, 64).setRegistryName("test"));
+		event.getRegistry().register(new PaintingType(32, 32).setRegistryName("test"));
 	}
 }

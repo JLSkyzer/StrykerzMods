@@ -85,6 +85,9 @@ public class StrykerzmodsModVariables {
 			nbt.putBoolean("DevenirBlue", instance.DevenirBlue);
 			nbt.putBoolean("OnTeam", instance.OnTeam);
 			nbt.putBoolean("AreHunter", instance.AreHunter);
+			nbt.putString("Pouvoir", instance.Pouvoir);
+			nbt.putDouble("ExplosionTimer", instance.ExplosionTimer);
+			nbt.putBoolean("ExplosionStatut", instance.ExplosionStatut);
 			return nbt;
 		}
 
@@ -99,6 +102,9 @@ public class StrykerzmodsModVariables {
 			instance.DevenirBlue = nbt.getBoolean("DevenirBlue");
 			instance.OnTeam = nbt.getBoolean("OnTeam");
 			instance.AreHunter = nbt.getBoolean("AreHunter");
+			instance.Pouvoir = nbt.getString("Pouvoir");
+			instance.ExplosionTimer = nbt.getDouble("ExplosionTimer");
+			instance.ExplosionStatut = nbt.getBoolean("ExplosionStatut");
 		}
 	}
 
@@ -111,6 +117,9 @@ public class StrykerzmodsModVariables {
 		public boolean DevenirBlue = false;
 		public boolean OnTeam = false;
 		public boolean AreHunter = false;
+		public String Pouvoir = "";
+		public double ExplosionTimer = 0;
+		public boolean ExplosionStatut = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				StrykerzmodsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -151,7 +160,10 @@ public class StrykerzmodsModVariables {
 		clone.DevenirBlue = original.DevenirBlue;
 		clone.OnTeam = original.OnTeam;
 		clone.AreHunter = original.AreHunter;
+		clone.Pouvoir = original.Pouvoir;
+		clone.ExplosionStatut = original.ExplosionStatut;
 		if (!event.isWasDeath()) {
+			clone.ExplosionTimer = original.ExplosionTimer;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -183,6 +195,9 @@ public class StrykerzmodsModVariables {
 					variables.DevenirBlue = message.data.DevenirBlue;
 					variables.OnTeam = message.data.OnTeam;
 					variables.AreHunter = message.data.AreHunter;
+					variables.Pouvoir = message.data.Pouvoir;
+					variables.ExplosionTimer = message.data.ExplosionTimer;
+					variables.ExplosionStatut = message.data.ExplosionStatut;
 				}
 			});
 			context.setPacketHandled(true);
