@@ -1357,15 +1357,6 @@
       "registry_name": "computer"
     },
     {
-      "name": "Test",
-      "type": "painting",
-      "sortid": 75,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "test"
-    },
-    {
       "name": "GoogleGui",
       "type": "gui",
       "sortid": 76,
@@ -1391,6 +1382,22 @@
           {
             "name": "guistate",
             "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1427,6 +1434,183 @@
           }
         ]
       }
+    },
+    {
+      "name": "CopperOr",
+      "type": "block",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_or"
+    },
+    {
+      "name": "SurvivalModsMinerais",
+      "type": "tab",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "survival_mods_minerais"
+    },
+    {
+      "name": "CopperIngot",
+      "type": "item",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ingot"
+    },
+    {
+      "name": "LingotTab",
+      "type": "tab",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lingot_tab"
+    },
+    {
+      "name": "SmeltCopperOre",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelt_copper_ore"
+    },
+    {
+      "name": "CraftMagazine",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_magazine"
+    },
+    {
+      "name": "Animated1",
+      "type": "block",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "animated_1"
+    },
+    {
+      "name": "AnimatedTab",
+      "type": "tab",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "animated_tab"
+    },
+    {
+      "name": "CopperBlock",
+      "type": "block",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_block"
+    },
+    {
+      "name": "BlockTab",
+      "type": "tab",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_tab"
+    },
+    {
+      "name": "CraftCopperBlock",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_copper_block"
+    },
+    {
+      "name": "UncraftBlock",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "uncraft_block"
+    },
+    {
+      "name": "UnrealCraftingTableGui",
+      "type": "gui",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unreal_crafting_table_gui"
+    },
+    {
+      "name": "HidderWiki",
+      "type": "gui",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hidder_wiki"
+    },
+    {
+      "name": "OpenHiddenWiki",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_hidden_wiki",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UnrealFusion",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unreal_fusion"
+    },
+    {
+      "name": "CraftUnrealFusion",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_unreal_fusion"
     }
   ],
   "variable_elements": [
@@ -1593,36 +1777,47 @@
       "item.strykerzmods.ak_47": "Ak 47",
       "block.strykerzmods.atm": "ATM",
       "item.strykerzmods.electric_armor_armor_helmet": "Electric_armor Helmet",
+      "block.strykerzmods.unreal_fusion": "Unreal Fusion",
       "itemGroup.tabbillet_tab": "Billet Tab",
       "block.strykerzmods.computer": "Computer",
+      "item.strykerzmods.copper_ingot": "§9Copper Ingot",
       "item.strykerzmods.billet_50": "Billet §a50$",
       "key.mcreator.money_key_k": "Money Key K",
       "item.strykerzmods.bullet": "Bullet",
       "itemGroup.tabphone_tab": "Phone Tab",
       "item.strykerzmods.bullet_texture": "Bullet Texture",
+      "block.strykerzmods.copper_block": "Copper Block",
+      "block.strykerzmods.copper_or": "Copper Ore",
       "itemGroup.tabcarte_identite_tab": "Carte Identite Tab",
+      "itemGroup.tabanimated_tab": "Survival Mod | Animated Tab",
       "item.strykerzmods.magazine": "Magazine",
+      "itemGroup.tabsurvival_mods_minerais": "Survival Mod | Minerais",
       "item.strykerzmods.billet_200": "Billet §a200$",
       "item.strykerzmods.billet_100": "Billet §a100$",
       "item.strykerzmods.billet_10": "Billet §a10$",
+      "itemGroup.tablingot_tab": "Survival Mod | Lingots",
+      "itemGroup.tabblock_tab": "Survival Mod | Blocks",
       "item.strykerzmods.billet_500": "Billet §a500$",
-      "item.strykerzmods.billet_5": "Billet §a5$"
+      "item.strykerzmods.billet_5": "Billet §a5$",
+      "block.strykerzmods.animated_1": "Animated 1"
     }
   },
   "workspaceSettings": {
     "modid": "strykerzmods",
     "modName": "strykerzMods",
     "version": "1.0.0",
-    "author": "Megaport, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "description": "Mod pour la survie ou pour les serveur",
+    "author": "StrykerzOfficiel",
+    "websiteURL": "https://github.com/strykerzOfficiel",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "styler",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Mon GitHub: https://github.com/strykerzOfficiel",
     "modElementsPackage": "net.forge.mods.strykerzmods",
     "lockBaseModFiles": false
   },

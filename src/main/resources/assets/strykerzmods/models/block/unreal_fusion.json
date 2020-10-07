@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "strykerzmods:blocks/orb_2",
+    "up": "strykerzmods:blocks/unreal_craftingtable_top",
+    "north": "strykerzmods:blocks/orb_2",
+    "east": "strykerzmods:blocks/orb_2",
+    "south": "strykerzmods:blocks/orb_2",
+    "west": "strykerzmods:blocks/orb_2",
+    "particle": "strykerzmods:blocks/orb_2"
+  }
+}

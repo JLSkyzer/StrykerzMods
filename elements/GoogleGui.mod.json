@@ -16,8 +16,8 @@
           "image": "google.png",
           "use1Xscale": false,
           "name": "google.png",
-          "x": 3,
-          "y": 8
+          "x": 4,
+          "y": 7
         }
       },
       {
@@ -43,6 +43,33 @@
           "name": "Rechercher",
           "x": 50,
           "y": 104
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vous voulez des liens de site ? recherchez: hidden.wiki",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Vous voulez des liens de site ? recherchez: hidden.wiki",
+          "x": 18,
+          "y": 19
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Fermer",
+          "onClick": {
+            "name": "ComputerOnBlockRightClicked"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Fermer",
+          "x": 367,
+          "y": 211
         }
       }
     ]

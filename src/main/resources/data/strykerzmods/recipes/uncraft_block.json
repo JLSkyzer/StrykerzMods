@@ -1,0 +1,16 @@
+{
+  "group": "strykerzmods",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "strykerzmods:copper_block"
+    }
+  },
+  "result": {
+    "item": "strykerzmods:copper_ingot",
+    "count": 9
+  }
+}

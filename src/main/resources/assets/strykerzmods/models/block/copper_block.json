@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "strykerzmods:blocks/copper_block",
+    "up": "strykerzmods:blocks/copper_block",
+    "north": "strykerzmods:blocks/copper_block",
+    "east": "strykerzmods:blocks/copper_block",
+    "south": "strykerzmods:blocks/copper_block",
+    "west": "strykerzmods:blocks/copper_block",
+    "particle": "strykerzmods:blocks/copper_block"
+  }
+}

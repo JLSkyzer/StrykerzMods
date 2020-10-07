@@ -5,9 +5,13 @@ loaderVersion="[31,)"
 modId="strykerzmods"
 version="1.0.0"
 displayName="strykerzMods"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="Megaport, MCreator"
+credits="Mon GitHub: https://github.com/strykerzOfficiel"
+displayURL="https://github.com/strykerzOfficiel"
+logoFile="logo.png"
+authors="StrykerzOfficiel"
+description='''
+Mod pour la survie ou pour les serveur
+'''
 
 [[dependencies.strykerzmods]]
     modId="minecraft"

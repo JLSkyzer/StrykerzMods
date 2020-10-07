@@ -1,0 +1,11 @@
+{
+  "_fv": 12,
+  "_type": "tab",
+  "definition": {
+    "name": "Survival Mod | Blocks",
+    "icon": {
+      "value": "CUSTOM:CopperBlock"
+    },
+    "showSearch": false
+  }
+}

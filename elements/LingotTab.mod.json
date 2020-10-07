@@ -1,0 +1,11 @@
+{
+  "_fv": 12,
+  "_type": "tab",
+  "definition": {
+    "name": "Survival Mod | Lingots",
+    "icon": {
+      "value": "CUSTOM:CopperIngot"
+    },
+    "showSearch": false
+  }
+}

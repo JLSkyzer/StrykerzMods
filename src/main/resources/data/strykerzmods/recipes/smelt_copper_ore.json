@@ -1,0 +1,12 @@
+{
+  "group": "strykerzmods",
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "strykerzmods:copper_or"
+  },
+  "result": {
+    "item": "strykerzmods:copper_ingot"
+  }
+}

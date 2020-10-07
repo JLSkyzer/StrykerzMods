@@ -1,0 +1,67 @@
+{
+  "_fv": 12,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Hidden Wiki",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Hidden Wiki",
+          "x": 161,
+          "y": 27
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Fermer",
+          "onClick": {
+            "name": "OpenGoogle"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Fermer",
+          "x": 352,
+          "y": 195
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 120,
+          "height": 20,
+          "name": "RechercherBar",
+          "x": 223,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Go",
+          "onClick": {
+            "name": "RechercherProcedure"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "Go",
+          "x": 343,
+          "y": 26
+        }
+      }
+    ]
+  }
+}

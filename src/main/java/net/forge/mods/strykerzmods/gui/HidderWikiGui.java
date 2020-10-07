@@ -31,7 +31,7 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.forge.mods.strykerzmods.procedures.RechercherProcedureProcedure;
-import net.forge.mods.strykerzmods.procedures.ComputerOnBlockRightClickedProcedure;
+import net.forge.mods.strykerzmods.procedures.OpenGoogleProcedure;
 import net.forge.mods.strykerzmods.StrykerzmodsModElements;
 import net.forge.mods.strykerzmods.StrykerzmodsMod;
 
@@ -40,11 +40,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @StrykerzmodsModElements.ModElement.Tag
-public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
+public class HidderWikiGui extends StrykerzmodsModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public GoogleGuiGui(StrykerzmodsModElements instance) {
-		super(instance, 76);
+	public HidderWikiGui(StrykerzmodsModElements instance) {
+		super(instance, 96);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -60,7 +60,7 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("google_gui"));
+		event.getRegistry().register(containerType.setRegistryName("hidder_wiki"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -112,10 +112,10 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 420;
-			this.ySize = 226;
+			this.xSize = 400;
+			this.ySize = 200;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("strykerzmods:textures/google_gui.png");
+		private static final ResourceLocation texture = new ResourceLocation("strykerzmods:textures/hidder_wiki.png");
 		@Override
 		public void render(int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground();
@@ -131,8 +131,6 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("strykerzmods:textures/google.png"));
-			this.blit(this.guiLeft + 0, this.guiTop + 0, 0, 0, 420, 226, 420, 226);
 		}
 
 		@Override
@@ -154,7 +152,7 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Vous voulez des liens de site ? recherchez: hidden.wiki", 14, 12, -16777216);
+			this.font.drawString("Hidden Wiki", 147, 7, -65536);
 		}
 
 		@Override
@@ -167,15 +165,15 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			RechercherBar = new TextFieldWidget(this.font, this.guiLeft + 123, this.guiTop + 97, 120, 20, "");
-			guistate.put("text:RechercherBar", RechercherBar);
-			RechercherBar.setMaxStringLength(32767);
-			this.children.add(this.RechercherBar);
-			this.addButton(new Button(this.guiLeft + 46, this.guiTop + 97, 75, 20, "Rechercher", e -> {
+			this.addButton(new Button(this.guiLeft + 338, this.guiTop + 175, 55, 20, "Fermer", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 363, this.guiTop + 204, 55, 20, "Fermer", e -> {
+			RechercherBar = new TextFieldWidget(this.font, this.guiLeft + 209, this.guiTop + 6, 120, 20, "");
+			guistate.put("text:RechercherBar", RechercherBar);
+			RechercherBar.setMaxStringLength(32767);
+			this.children.add(this.RechercherBar);
+			this.addButton(new Button(this.guiLeft + 329, this.guiTop + 6, 35, 20, "Go", e -> {
 				StrykerzmodsMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
@@ -272,23 +270,23 @@ public class GoogleGuiGui extends StrykerzmodsModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("guistate", guistate);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				RechercherProcedureProcedure.executeProcedure($_dependencies);
+				OpenGoogleProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("guistate", guistate);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ComputerOnBlockRightClickedProcedure.executeProcedure($_dependencies);
+				RechercherProcedureProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

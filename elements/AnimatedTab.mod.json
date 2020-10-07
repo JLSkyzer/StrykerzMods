@@ -1,0 +1,11 @@
+{
+  "_fv": 12,
+  "_type": "tab",
+  "definition": {
+    "name": "Survival Mod | Animated Tab",
+    "icon": {
+      "value": "CUSTOM:Animated1"
+    },
+    "showSearch": false
+  }
+}

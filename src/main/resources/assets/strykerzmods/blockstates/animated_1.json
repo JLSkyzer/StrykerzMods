@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "strykerzmods:block/animated_1"
+    },
+    "facing=east": {
+      "model": "strykerzmods:block/animated_1",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "strykerzmods:block/animated_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "strykerzmods:block/animated_1",
+      "y": 270
+    }
+  }
+}

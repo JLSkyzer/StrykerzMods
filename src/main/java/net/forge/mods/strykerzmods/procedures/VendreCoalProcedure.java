@@ -1,7 +1,6 @@
 package net.forge.mods.strykerzmods.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
@@ -63,11 +62,8 @@ public class VendreCoalProcedure extends StrykerzmodsModElements.ModElement {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(Items.COAL, (int) (1));
-				_setstack.setCount((int) 1);
-				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-			}
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(Items.COAL, (int) (1)).getItem() == p.getItem(), (int) 1);
 			{
 				String _setval = (String) "\u00A7a+5$ \u00A7bCoal \u00A7esur \u00A76MinerShop";
 				entity.getCapability(StrykerzmodsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

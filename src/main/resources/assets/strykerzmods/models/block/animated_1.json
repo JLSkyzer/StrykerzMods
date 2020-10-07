@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "strykerzmods:blocks/clay",
+    "up": "strykerzmods:blocks/clay",
+    "north": "strykerzmods:blocks/tunnel",
+    "east": "strykerzmods:blocks/clay",
+    "south": "strykerzmods:blocks/clay",
+    "west": "strykerzmods:blocks/clay",
+    "particle": "strykerzmods:blocks/clay"
+  }
+}
